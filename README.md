@@ -1,5 +1,12 @@
 # BOZO Crypto Game
 
+> 🎮 **Bitcoin-powered fortune telling game** - Connect your wallet, purchase cards with rune tokens, and discover your digital fortune through an interactive card-based experience built on the Bitcoin network.
+
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Bitcoin](https://img.shields.io/badge/Bitcoin-Integration-orange?style=flat&logo=bitcoin)](https://bitcoin.org/)
+[![Sats Connect](https://img.shields.io/badge/Sats%20Connect-Wallet%20API-green?style=flat)](https://docs.sats-connect.com/)
+
 A Next.js-based Bitcoin crypto game that integrates with Bitcoin wallets through Sats Connect, featuring fortune telling mechanics and rune token transactions.
 
 ## 🎮 Project Overview
