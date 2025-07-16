@@ -1,36 +1,194 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BOZO Crypto Game
 
-## Getting Started
+A Next.js-based Bitcoin crypto game that integrates with Bitcoin wallets through Sats Connect, featuring fortune telling mechanics and rune token transactions.
 
-First, run the development server:
+## 🎮 Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+BOZO is an interactive crypto game built on the Bitcoin network that allows users to:
+- Connect Bitcoin wallets (payment, ordinals, and stacks addresses)
+- Purchase fortune cards using rune tokens
+- Experience animated fortune telling gameplay
+- Manage digital card collections
+
+## ✨ Features
+
+### 🔗 Wallet Integration
+- **Multi-address support**: Payment, Ordinals, and Stacks addresses
+- **Sats Connect integration**: Seamless wallet connection
+- **Bitcoin transaction signing**: Secure PSBT-based transactions
+- **Network support**: Mainnet and testnet compatibility
+
+### 🎯 Game Mechanics
+- **Fortune telling interface**: Interactive card-based gameplay
+- **Rune token transactions**: Purchase cards using Bitcoin runes
+- **Card collection system**: Collect and manage digital cards
+- **Animated UI**: Smooth transitions and visual effects using Framer Motion
+
+### 🛠 Technical Features
+- **TypeScript**: Full type safety
+- **Tailwind CSS**: Modern responsive styling
+- **React Query**: Efficient data fetching and caching
+- **Local storage**: Persistent user state
+- **Bitcoin.js**: Advanced Bitcoin transaction handling
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+- A Bitcoin wallet with Sats Connect support (e.g., Xverse, Unisat)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd BOZO-xverse-nextjs
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env.local` file in the root directory:
+   ```env
+   NEXT_PUBLIC_API_KEY=your_api_key_here
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
+
+## 🏗 Project Structure
+
+```
+src/
+├── app/                    # Next.js app directory
+│   ├── layout.tsx         # Root layout component
+│   ├── page.tsx           # Main page component
+│   └── globals.css        # Global styles
+├── components/            # React components
+│   ├── Bozo.tsx          # Main game component
+│   ├── Game.tsx          # Game state management
+│   ├── Intro.tsx         # Wallet connection interface
+│   ├── Fortune.tsx       # Main game interface
+│   ├── Pack.tsx          # Card pack component
+│   ├── OpenPack.tsx      # Pack opening animation
+│   ├── GetFortune.tsx    # Fortune telling interface
+│   ├── Account.tsx       # User account management
+│   └── ...               # Other UI components
+├── contexts/             # React contexts
+│   └── AppState.tsx      # Global application state
+├── hooks/                # Custom React hooks
+│   └── LocalStorage.ts   # Local storage utilities
+├── api/                  # API functions
+│   └── api.ts           # Bitcoin and game API calls
+└── fonts/               # Custom fonts
+    └── fonts.ts         # Font configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Key Technologies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Frontend
+- **Next.js 14**: React framework with app router
+- **TypeScript**: Type-safe JavaScript
+- **Tailwind CSS**: Utility-first CSS framework
+- **Framer Motion**: Animation library
+- **React Query**: Data fetching and caching
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Bitcoin Integration
+- **Sats Connect**: Bitcoin wallet connection standard
+- **Bitcoin.js**: Bitcoin transaction library
+- **Runelib**: Rune token handling
+- **ECPair**: Bitcoin key management
 
-## Learn More
+### Development Tools
+- **ESLint**: Code linting
+- **PostCSS**: CSS processing
+- **Autoprefixer**: CSS vendor prefixing
 
-To learn more about Next.js, take a look at the following resources:
+## 🎮 Game Flow
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Wallet Connection**: Users connect their Bitcoin wallet through the intro screen
+2. **Address Setup**: The app requests payment, ordinals, and stacks addresses
+3. **Fortune Interface**: Users can purchase fortune cards using rune tokens
+4. **Transaction Process**: 
+   - Create PSBT for rune token transfer
+   - Sign transaction with wallet
+   - Broadcast transaction to Bitcoin network
+5. **Card Collection**: Users receive digital cards after successful transactions
+6. **Account Management**: Users can view their collection and manage their account
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🔐 Security Features
 
-## Deploy on Vercel
+- **PSBT-based transactions**: Secure Bitcoin transaction signing
+- **Wallet integration**: No private key exposure
+- **Network validation**: Proper Bitcoin network handling
+- **Error handling**: Comprehensive error management
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Vercel (Recommended)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+
+### Manual Deployment
+1. Build the application:
+   ```bash
+   npm run build
+   ```
+
+2. Start the production server:
+   ```bash
+   npm start
+   ```
+
+## 📝 API Endpoints
+
+The game integrates with several APIs:
+- **Rune Whisperers API**: Card management and game logic
+- **Unisat API**: Bitcoin transaction data
+- **Blockchain.info**: Bitcoin balance checking
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🆘 Support
+
+For support and questions:
+- Check the [Next.js documentation](https://nextjs.org/docs)
+- Review [Sats Connect documentation](https://docs.sats-connect.com/)
+- Open an issue in the repository
+
+## 🔗 Links
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Sats Connect Documentation](https://docs.sats-connect.com/)
+- [Bitcoin.js Documentation](https://github.com/bitcoinjs/bitcoinjs-lib)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
