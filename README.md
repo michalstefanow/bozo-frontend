@@ -49,8 +49,8 @@ BOZO is an interactive crypto game built on the Bitcoin network that allows user
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd BOZO-xverse-nextjs
+   git clone https://github.com/michalstefanow/bozo-frontend.git
+   cd bozo-frontend
    ```
 
 2. **Install dependencies**
@@ -186,16 +186,3 @@ The game integrates with several APIs:
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🆘 Support
-
-For support and questions:
-- Check the [Next.js documentation](https://nextjs.org/docs)
-- Review [Sats Connect documentation](https://docs.sats-connect.com/)
-- Open an issue in the repository
-
-## 🔗 Links
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Sats Connect Documentation](https://docs.sats-connect.com/)
-- [Bitcoin.js Documentation](https://github.com/bitcoinjs/bitcoinjs-lib)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
