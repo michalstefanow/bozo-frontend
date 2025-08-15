@@ -182,6 +182,10 @@ The game integrates with several APIs:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
+## Contact
+- Telegram [@michalstefanow](https://t.me/mylord1_1)
+- Twitter [@michalstefanow](https://x.com/michalstefanow)
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
